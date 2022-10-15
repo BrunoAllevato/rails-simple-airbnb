@@ -1,0 +1,22 @@
+<div class="row">
+  <h1>All our Flats</h1>
+  <p>All <%= @flats.length %> flats</p>
+</div>
+
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col-4">
+      <div class="flat-card">
+          <img src="https://source.unsplash.com/random/150x200/?<%= flat.name %>"
+          class="card-img-top object-fit" height='180px'>
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <p class="card-text"><%= flat.description %></p>
+          </div>
+          <div class="card-footer text-center">
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>
